@@ -12,6 +12,8 @@
 
 @import url("vues/produit.css");
 @import url("vues/recherche.css");
+@import url("vues/boutique.css");
+
 
 :root, input, button, select, option {
     font-family: 'Inter', sans-serif;

@@ -7,7 +7,7 @@
  */
 function getBoutiqueInfos(): array
 {
-    $db = new mysqli("localhost", "root", "root", "geekzone_vitrine");
+    $db = new mysqli("localhost", "root", "", "geekzone_vitrine");
     $output = [];
 
     $query = $db->query("SELECT * FROM boutique");

@@ -11,7 +11,7 @@
  */
 function filtreProduits(string $nom, string $categorie, ?string $ville): array
 {
-    $db = new mysqli("localhost", "root", "root", "geekzone_vitrine");
+    $db = new mysqli("localhost", "root", "", "geekzone_vitrine");
     $output = [];
 
     $sql = <<<SQL
@@ -23,7 +23,7 @@ function filtreProduits(string $nom, string $categorie, ?string $ville): array
     if (!empty($nom) && !empty($categorie))
         $sql .= "WHERE libelle = '$categorie' AND nom LIKE '$nom'";
 
-    echo $sql;
+    // echo $sql;
 
     $query = $db->query($sql);
 

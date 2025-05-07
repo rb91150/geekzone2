@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/assets/css/index.css" />
+        <link rel="stylesheet" href="/geekzone2/assets/css/index.css" />
         <title>Geekzone - Boutiques</title>
     </head>
     <body>
@@ -13,30 +13,22 @@
                 <?php include "./inclure/fonctions/boutique.php" ?>
                 <h1>Boutiques</h1>
                 <?php foreach(getBoutiqueInfos() as $boutique): ?>
-                    <div class="geekzone-grid-2">
+                    <div class="geekzone-boutique">
                         <div>
                             <img
-                                src="/stockage/boutiques/<?= $boutique['image'] ?>"
+                                src="/geekzone2/stockage/boutiques/<?= $boutique['image'] ?>"
                                 alt="Boutique <?= $boutique['ville'] ?>"
+                                width="200"
+                                style="border-radius: 8px; object-fit: cover;"
                             />
                         </div>
                         <div>
                             <ul>
-                                <li>
-                                    <p>Adresse: <?= $boutique['rue'] ?></p>
-                                </li>
-                                <li>
-                                    <p>Code postal: <?= $boutique['cp'] ?></p>
-                                </li>
-                                <li>
-                                    <p>Ville: <?= $boutique['ville'] ?></p>
-                                </li>
-                                <li>
-                                    <p>Numéro de téléphone: <?= $boutique['telephone'] ?></p>
-                                </li>
-                                <li>
-                                    <p>Horaire: <?= $boutique['horaires'] ?></p>
-                                </li>
+                                <li><p><strong>Adresse :</strong> <?= $boutique['rue'] ?></p></li>
+                                <li><p><strong>Code postal :</strong> <?= $boutique['cp'] ?></p></li>
+                                <li><p><strong>Ville :</strong> <?= $boutique['ville'] ?></p></li>
+                                <li><p><strong>Téléphone :</strong> <?= $boutique['telephone'] ?></p></li>
+                                <li><p><strong>Horaires :</strong> <?= $boutique['horaires'] ?></p></li>
                             </ul>
                         </div>
                     </div>
